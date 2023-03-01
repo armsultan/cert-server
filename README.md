@@ -63,13 +63,13 @@ if you are having trouble getting the real client IP
 
     ```bash
     # Rebuild container if you make changes
-    docker-compose build --no-cache
+    docker compose build --no-cache
 
     # Start the container
-    docker-compose up -d
+    docker compose up -d
     
     # Tail the logs
-    docker-compose logs -f
+    docker compose logs -f
     ```
 
 1. You can retrieve the certs over `port 9000` 
