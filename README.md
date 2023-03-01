@@ -61,27 +61,27 @@ if you are having trouble getting the real client IP
 
 1. Start container using `docker-compose`
 
-  ```bash
-  # Rebuild container if you make changes
-  docker-compose build --no-cache
+    ```bash
+    # Rebuild container if you make changes
+    docker-compose build --no-cache
 
-  # Start the container
-  docker-compose up -d
-  
-  # Tail the logs
-  docker-compose logs -f
-  ```
+    # Start the container
+    docker-compose up -d
+    
+    # Tail the logs
+    docker-compose logs -f
+    ```
 
 1. You can retrieve the certs over `port 9000` 
 
-  ```bash
-  # Examples
-  
-  # NGINX will serve /etc/letsencrypt/live/example.com/fullchain.pem from disk
-  curl http://localhost:9000/example.com/fullchain.pem
-  # This gets the private key for example.org
-  curl http://localhost:9000/example.org/privkey.pem
-  ```
+    ```bash
+    # Examples
+
+    # NGINX will serve /etc/letsencrypt/live/example.com/fullchain.pem from disk
+    curl http://localhost:9000/example.com/fullchain.pem
+    # This gets the private key for example.org
+    curl http://localhost:9000/example.org/privkey.pem
+    ```
 
 1. You can also retrieve the certs from the mounted folder
    `./letsencrypt/live/${domain}/*.pem`
