@@ -1,0 +1,1 @@
+14 5 * * * /cert-cron.sh  > /dev/stdout
