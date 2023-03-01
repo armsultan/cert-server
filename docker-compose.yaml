@@ -21,7 +21,7 @@ services:
             mode: host # get real ip for NGINX access control, NOT SUPPORTED IN Docker for Desktop
         volumes:
             - ./letsencrypt:/etc/letsencrypt
-            - ./default:/etc/nginx/conf.d/default.conf # for easier nginx config editing locally
+            - ./default.conf:/etc/nginx/conf.d/default.conf # for easier nginx config editing locally
         environment:
             DNS_CLOUDFLARE_CREDENTIALS: /run/secrets/cloudflare_credentials
         secrets: 
