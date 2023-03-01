@@ -18,6 +18,9 @@ RUN apk add python3 python3-dev py3-pip build-base libressl-dev musl-dev libffi-
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     # && ln -sf /dev/stderr /var/log/nginx/error.log \
     # Forward letsencrypt logs to docker log collector
-    && ln -sf /dev/stderr /var/log/letsencrypt/letsencrypt.log 
+    && ln -sf /dev/stderr /var/log/letsencrypt/letsencrypt.log \
+    && chown -R nginx:nginx /etc/nginx \
+    && chown -R nginx:nginx /etc/letsencrypt
+
 
 EXPOSE 9000
