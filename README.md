@@ -7,7 +7,7 @@ infrastructure.
 Using [Cron](https://crontab.guru/), [Certbot](https://certbot.eff.org/) with
 the [Cloudflare DNS
 plugin](https://certbot-dns-cloudflare.readthedocs.io/en/stable/) keep your
-certificates updated. Then [NGINX]()https://nginx.org/ serves these Let's
+certificates updated. Then [NGINX](https://nginx.org/) serves these Let's
 Encrypt certs (`.pem` files) over `port 9000`.
 
 Access control can be enforced using NGINX [API key
